@@ -5,7 +5,7 @@ const getSongs = (singerId) =>
 		return song.singers.includes(singerId);
 	});
 
-module.exports = {
+const Query = {
 	singers: (_, args) => {
 		const { page, limit } = args.options;
 		const startIdx = limit * (page - 1);
@@ -24,4 +24,11 @@ module.exports = {
 
 		return { ...singer, songs: getSongs(singer.id) };
 	},
+};
+
+const Mutation = {};
+
+module.exports = {
+	Query,
+	Mutation,
 };
