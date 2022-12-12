@@ -29,7 +29,7 @@ const sortSongs = (criteria, order) => {
 		);
 };
 
-module.exports = {
+const Query = {
 	songs: (_, args) => {
 		const { page, limit, sort, filter } = args.options;
 		const startIdx = limit * (page - 1);
@@ -51,4 +51,11 @@ module.exports = {
 
 		return { ...song, singers: getSingers.apply(song.singers) };
 	},
+};
+
+const Mutation = {};
+
+module.exports = {
+	Query,
+	Mutation,
 };

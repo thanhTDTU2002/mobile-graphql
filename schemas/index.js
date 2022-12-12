@@ -13,9 +13,13 @@ const RootQuery = `
 const typeDefs = `#graphql ${SongType} ${SingerType} ${RootQuery}`;
 const resolvers = {
 	Query: {
-		...SongResolvers,
-		...SingerResolvers,
+		...SongResolvers.Query,
+		...SingerResolvers.Query,
 	},
+	// Mutation: {
+	// 	...SongResolvers.Mutation,
+	// 	...SingerResolvers.Mutation,
+	// },
 };
 
 module.exports = {
