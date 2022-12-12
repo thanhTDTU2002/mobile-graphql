@@ -3,9 +3,10 @@ const { SingerType, SingerResolvers } = require('./singer');
 
 const RootQuery = `
     type Query {
-        songs(options: FilterOptions): [Song],
+        songs(options: FilterOptions = {}): [Song],
         song(id: ID!): Song,
-        singers: [Singer]
+        singers(options: FilterOptions = {}): [Singer],
+		singer(id: ID!): Singer
     }
 `;
 
