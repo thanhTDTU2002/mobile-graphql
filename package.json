@@ -1,0 +1,13 @@
+{
+	"name": "midterm-mobile",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"start": "nodemon ."
+	},
+	"dependencies": {
+		"@apollo/server": "^4.2.2",
+		"graphql": "^16.6.0"
+	}
+}
